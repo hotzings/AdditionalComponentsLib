@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "additional_components_lib",
+  "version": "${version}",
+  "name": "AdditionalComponentsLib",
+  "description": "A library that adds more components to items",
+  "authors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/additional_components_lib/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "me.zings.additional_components_lib.client.Additional_components_libClient"
+    ],
+    "main": [
+      "me.zings.additional_components_lib.Additional_components_lib"
+    ]
+  },
+  "mixins": [
+    "additional_components_lib.mixins.json",
+    {
+      "config": "additional_components_lib.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
