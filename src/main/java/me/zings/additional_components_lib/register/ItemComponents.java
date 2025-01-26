@@ -21,6 +21,12 @@ public class ItemComponents {
             ComponentType.<Boolean>builder().codec(Codec.BOOL).build()
     );
 
+    public static final ComponentType<Boolean> OCCLUDE_VIBRATION_SIGNALS = Registry.register(
+            Registries.DATA_COMPONENT_TYPE,
+            Identifier.of(Additional_components_lib.MOD_ID, "occlude_vibration_signals"),
+            ComponentType.<Boolean>builder().codec(Codec.BOOL).build()
+    );
+
     public static void registerItemComponents(){
 
     }

@@ -5,7 +5,8 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "CactusBlockMixin",
-    "ExplosionBlockMixin"
+    "ExplosionBlockMixin",
+    "VibrationBlock"
   ],
   "injectors": {
     "defaultRequire": 1
