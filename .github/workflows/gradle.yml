@@ -43,7 +43,7 @@ jobs:
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: .temp/untitled-1.0-SNAPSHOT.jar
-        asset_name: nightly-v-${{github.run_number}}.jar
+        asset_name: AdditionalComponentsLib-Release-v-${{github.run_number}}.jar
         tag: Release-V-${{github.run_number}}
         overwrite: true
         body: "This is my release text"
