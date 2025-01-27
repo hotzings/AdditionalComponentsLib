@@ -35,19 +35,13 @@ jobs:
       run: |
         ./gradlew build
         mv build/libs/untitled-1.0-SNAPSHOT.jar .temp/untitled-1.0-SNAPSHOT.jar
-        
-        git config user.name "github-actions[bot]"
-        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git add .
-        git commit -m "generated"
-        git push
 
 
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: build/libs/untitled-1.0-SNAPSHOT.jar
+        file: .temp/untitled-1.0-SNAPSHOT.jar
         asset_name: export-v-${{github.run_number}}.zip
         tag: Release-V-${{github.run_number}}
         overwrite: true
