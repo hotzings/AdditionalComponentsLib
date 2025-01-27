@@ -6,8 +6,9 @@
   "mixins": [
     "CactusBlockMixin",
     "DespawnBlock",
-    "ExplosionBlockMixin",
+    "DamageBlockMixin",
     "VibrationBlock",
+    "VoidBlock",
     "Weight"
   ],
   "injectors": {
