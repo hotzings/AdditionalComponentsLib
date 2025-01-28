@@ -46,7 +46,7 @@ jobs:
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: build/libs/${{MOD_NAME}}-${{MOD_VERSION_PACKAGE}}.jar
+        file: build/libs/${{env.MOD_NAME}}-${{env.MOD_VERSION_PACKAGE}}.jar
         asset_name: AdditionalComponentsLib-Release-v-${{github.run_number}}.jar
         tag: Release-V-${{github.run_number}}
         overwrite: true
