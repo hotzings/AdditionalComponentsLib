@@ -57,6 +57,10 @@ jobs:
         mod_version=$(grep '^mod_version=' gradle.properties | cut -d'=' -f2 | cut -d'-' -f1)
         
         ./gradlew build
+
+        cd ..
+        cp repo-master/build/libs/${mod_name}-${mod_version_package}.jar repo-modresources/${mod_name}-${mod_version_package}.jar
+        
         
       
     
@@ -70,7 +74,7 @@ jobs:
 
         echo test >> new-file.txt
 
-        git add new-file.txt
+        git add .
         git commit -m "test"
 
         git push origin modresources
