@@ -42,6 +42,7 @@ jobs:
         echo "MOD_VERSION_PACKAGE=$MOD_VERSION_PACKAGE" >> $GITHUB_ENV
         echo "MOD_NAME=$MOD_NAME" >> $GITHUB_ENV
         echo "MINECRAFT_VERSION=$MINECRAFT_VERSION" >> GITHUB_ENV
+        echo "$MINECRAFT_VERSION"
 
 
     - name: Extract Commit Message
