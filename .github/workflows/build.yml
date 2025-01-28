@@ -38,8 +38,10 @@ jobs:
 
         export MOD_VERSION_PACKAGE=$(grep '^mod_version=' gradle.properties | cut -d'=' -f2)
         export MOD_NAME=$(grep '^archives_base_name=' gradle.properties | cut -d'=' -f2)
+        export MINECRAFT_VERSION=$(grep '^minecraft_version=' gradle.properties | cut -d'=' -f2)
         echo "MOD_VERSION_PACKAGE=$MOD_VERSION_PACKAGE" >> $GITHUB_ENV
         echo "MOD_NAME=$MOD_NAME" >> $GITHUB_ENV
+        echo "MINECRAFT_VERSION=$MINECRAFT_VERSION" >> GITHUB_ENV
 
 
     - name: Upload binaries to release
@@ -47,8 +49,8 @@ jobs:
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: build/libs/${{env.MOD_NAME}}-${{env.MOD_VERSION_PACKAGE}}.jar
-        asset_name: ${{env.MOD_NAME}}-${{env.MOD_VERSION_PACKAGE}}-${{github.run_number}}.jar
-        tag: Release-VV-${{github.run_number}}
+        asset_name: ${{env.MOD_NAME}}-${{env.MINECRAFT_VERSION}}-${{env.MOD_VERSION_PACKAGE}}-${{github.run_number}}.jar
+        tag: Nightly-Build-${{env.MINECRAFT_VERSION}}-${{env.MOD_VERSION_PACKAGE}}-${{github.run_number}}
         overwrite: true
         body: "This is my release text"
 
