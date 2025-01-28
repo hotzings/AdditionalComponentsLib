@@ -68,6 +68,8 @@ jobs:
         git config user.name "oelohey"
         git config user.email "oelohey@gmail.com"
 
+        echo test > new-file.txt
+
         git add new-file.txt
         git commit -m "test"
 
