@@ -65,8 +65,8 @@ jobs:
         ls
         cd repo-modresources
 
-        git config user.name "oelohey"
-        git config user.email "oelohey@gmail.com"
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
 
         echo test > new-file.txt
 
