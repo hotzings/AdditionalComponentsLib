@@ -1,1 +1,0 @@
-add icon.png to resources
