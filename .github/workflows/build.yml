@@ -44,6 +44,12 @@ jobs:
         echo "MINECRAFT_VERSION=$MINECRAFT_VERSION" >> GITHUB_ENV
 
 
+    - name: Extract Commit Message
+      id: get_commit_message
+      run: |
+        export COMMIT_MESSAGE=$(git log -1 --pretty=format:%s)
+        echo "COMMIT_MESSAGE=$COMMIT_MESSAGE" >> $GITHUB_ENV
+
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
@@ -52,7 +58,7 @@ jobs:
         asset_name: ${{env.MOD_NAME}}-${{env.MINECRAFT_VERSION}}-${{env.MOD_VERSION_PACKAGE}}-${{github.run_number}}.jar
         tag: Nightly-Build-${{env.MINECRAFT_VERSION}}-${{env.MOD_VERSION_PACKAGE}}-${{github.run_number}}
         overwrite: true
-        body: "This is my release text"
+        body: "${{env.COMMIT_MESSAGE}}"
 
     # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
     # If your project does not have the Gradle Wrapper configured, you can use the following configuration to run Gradle with a specified version.
