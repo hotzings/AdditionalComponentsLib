@@ -48,7 +48,7 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: build/libs/${{env.MOD_NAME}}-${{env.MOD_VERSION_PACKAGE}}.jar
         asset_name: AdditionalComponentsLib-Release-v-${{github.run_number}}.jar
-        tag: Release-V-${{github.run_number}}
+        tag: Release-VV-${{github.run_number}}
         overwrite: true
         body: "This is my release text"
 
