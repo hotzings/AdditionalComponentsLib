@@ -22,18 +22,16 @@ jobs:
     steps:
 
     - name: pull
-
       uses: actions/checkout@v4
       with:
           ref: master
-          fetch-depth: 0
+          path: repo-master
 
     - name: pull 2nd branch
-      run: |
-          git fetch origin modresources
-          git checkout modresources
-
-          ls
+      uses: actions/checkout@v4
+      with:
+          ref: modresources
+          path: repo-modresources
 
 
 
@@ -48,8 +46,10 @@ jobs:
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
 
-    - name: Build and Publish
+    - name: Build
       run: |
+        ls
+        cd repo-master
 
         mod_version_package=$(grep '^mod_version=' gradle.properties | cut -d'=' -f2)
         mod_name=$(grep '^archives_base_name=' gradle.properties | cut -d'=' -f2)
@@ -57,8 +57,14 @@ jobs:
         mod_version=$(grep '^mod_version=' gradle.properties | cut -d'=' -f2 | cut -d'-' -f1)
         
         ./gradlew build
+        
+      
+    
+    - name: Publish
+      run: |
+        cd ..
+        cd repo-modresources
 
-        cd modresources
         git config user.name "oelohey"
         git config user.email "oelohey@gmail.com"
 
