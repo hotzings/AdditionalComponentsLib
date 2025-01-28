@@ -68,7 +68,7 @@ jobs:
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
 
-        echo test > new-file.txt
+        echo test >> new-file.txt
 
         git add new-file.txt
         git commit -m "test"
