@@ -43,7 +43,7 @@ jobs:
         
         ./gradlew build
 
-        git clone hhpts://user:$GITHUB_TOKEN@github.com/oelohey/modresources
+        git clone https://user:$GITHUB_TOKEN@github.com/oelohey/modresources
 
         cd modresources
         git config user.name "oelohey"
