@@ -29,6 +29,7 @@ jobs:
           ref: master
           fetch-depth: 0
 
+    - name: pull 2nd branch
       run: |
           git fetch origin modresources
           git checkout modresources
