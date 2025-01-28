@@ -62,7 +62,7 @@ jobs:
     
     - name: Publish
       run: |
-        cd ..
+        ls
         cd repo-modresources
 
         git config user.name "oelohey"
