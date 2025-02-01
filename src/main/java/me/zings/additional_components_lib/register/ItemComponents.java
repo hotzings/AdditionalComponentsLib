@@ -17,7 +17,7 @@ public class ItemComponents {
 
     public static final ComponentType<Boolean> EXPLOSION_RESISTANT = Registry.register(
             Registries.DATA_COMPONENT_TYPE,
-            Identifier.of(Additional_components_lib.MOD_ID, "explosion_resistant"),
+            Identifier.of(Additional_components_lib.MOD_ID, "blast_resistant"),
             ComponentType.<Boolean>builder().codec(Codec.BOOL).build()
     );
 
@@ -30,6 +30,12 @@ public class ItemComponents {
     public static final ComponentType<Boolean> VOID_RESISTANT = Registry.register(
             Registries.DATA_COMPONENT_TYPE,
             Identifier.of(Additional_components_lib.MOD_ID, "void_resistant"),
+            ComponentType.<Boolean>builder().codec(Codec.BOOL).build()
+    );
+
+    public static final ComponentType<Boolean> LIGHTNING_RESISTANT = Registry.register(
+            Registries.DATA_COMPONENT_TYPE,
+            Identifier.of(Additional_components_lib.MOD_ID, "lightning_resistant"),
             ComponentType.<Boolean>builder().codec(Codec.BOOL).build()
     );
 

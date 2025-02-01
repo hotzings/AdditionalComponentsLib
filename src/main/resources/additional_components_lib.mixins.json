@@ -5,8 +5,9 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "CactusBlockMixin",
-    "DespawnBlock",
     "DamageBlockMixin",
+    "DespawnBlock",
+    "LightningBlock",
     "VibrationBlock",
     "VoidBlock",
     "Weight"
