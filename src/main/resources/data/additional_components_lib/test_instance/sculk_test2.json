@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:block_based",
+  "environment": "minecraft:default",
+  "max_ticks": 20,
+  "required": false,
+  "setup_ticks": 1,
+  "structure": "additional_components_lib:sculk_test2"
+}

@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:game_rules",
+  "bool_rules": [{"rule": "doTileDrops", "value": false}],
+  "int_rules": []
+}
