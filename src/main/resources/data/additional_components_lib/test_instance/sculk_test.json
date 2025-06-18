@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:block_based",
+  "environment": "minecraft:default",
+  "function": "minecraft:always_pass",
+  "max_ticks": 200,
+  "required": false,
+  "setup_ticks": 1,
+  "structure": "additional_components_lib:sculk_test"
+}
