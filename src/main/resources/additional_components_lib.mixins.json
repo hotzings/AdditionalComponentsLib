@@ -4,6 +4,7 @@
   "package": "me.zings.additional_components_lib.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "CactusBlockMixin",
     "DamageBlockMixin",
     "DespawnBlock",
     "LightningBlock",

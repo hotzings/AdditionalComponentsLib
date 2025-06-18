@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:block_based",
+  "environment": "additional_components_lib:no_drops",
+  "max_ticks": 100,
+  "required": true,
+  "setup_ticks": 1,
+  "structure": "additional_components_lib:blast_resistance_test"
+}
